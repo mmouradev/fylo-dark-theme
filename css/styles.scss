@@ -1,0 +1,151 @@
+// Import Fontes
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700&display=swap");
+
+$white: hsl(0, 0%, 100%);
+
+body {
+  font-family: "Open Sans";
+  font-size: 14px;
+  background: hsl(218, 28%, 13%);
+  color: $white;
+  line-height: 1.5;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  @media screen and (max-width: 375px) {
+    width: 90%;
+    display: flex;
+  }
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.img-resposive {
+  max-width: 100%;
+}
+h1 {
+  font-size: 1.8em;
+}
+.btn {
+  padding: 20px 0px;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 30px;
+}
+.btn-blue {
+  background: linear-gradient(
+    90deg,
+    hsl(176, 68%, 64%) 0%,
+    hsl(198, 60%, 50%) 100%
+  );
+  font-weight: 700;
+  color: $white;
+}
+
+header {
+  background: hsl(217, 28%, 15%);
+  padding: 20px 0;
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 100px;
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      li {
+        &:not(:first-of-type) {
+          margin-left: 15px;
+        }
+        a {
+          font-family: "Raleway";
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+main {
+  background: hsl(217, 28%, 15%) url(../images/bg-curvy-mobile.svg) no-repeat;
+  background-position: 60% 101%;
+  background-size: 250%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.product {
+  text-align: center;
+  margin-top: 150px;
+
+  .panel {
+    &:not(:first-of-type) {
+      margin-top: 60px;
+    }
+  }
+}
+
+.description {
+  margin-top: 150px;
+  .text-description {
+    margin-top: 30px;
+    p {
+      &:not(:first-of-type) {
+        margin-top: 30px;
+      }
+    }
+
+    a {
+      background: url(../images/icon-arrow.svg) no-repeat;
+      background-position: right;
+      padding: 0 20px 0 0;
+      color: hsl(176, 68%, 64%);
+      text-decoration: none;
+      border-bottom: 1px solid hsl(176, 68%, 64%);
+    }
+  }
+}
+
+.comment {
+  margin-top: 150px;
+  padding-top: 40px;
+  background: url(../images/bg-quotes.png) no-repeat;
+  background-position: 8% 0%;
+  .card-comment {
+    background: hsl(219, 30%, 18%);
+    padding: 30px;
+    &:not(:first-of-type) {
+      margin-top: 30px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      img {
+        height: 40px;
+        border-radius: 50%;
+      }
+      p {
+        margin-left: 15px;
+        font-weight: 700;
+        small {
+          display: block;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
